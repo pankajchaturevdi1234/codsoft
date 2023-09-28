@@ -1,0 +1,51 @@
+# for additi0n
+def add(x, y):
+    return x + y
+
+# for subtraction
+def subtract(x, y):
+    return x - y
+
+# for multiplication
+def multiply(x, y):
+    return x * y
+
+# for division
+def divide(x, y):
+    return x / y
+
+
+print("Select for operation.")
+print("a.Add")
+print("b.Subtract")
+print("c.Multiply")
+print("d.Divide")
+
+while True:
+    choice = input("Enter choice(a/b/c/d): ")
+
+    if choice in ('a', 'b', 'c', 'd'):
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+        except ValueError:
+            print("invalid syntax:😒")
+            continue
+
+        if choice == 'a':
+            print(num1, "+", num2, "=", add(num1,num2))
+
+        elif choice == 'b':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == 'c':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == 'd':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        
+    #    if user want's to do next calculation
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+        if next_calculation == "no":
+          break
+   
